@@ -1,0 +1,22 @@
+<div id="main-card" class="card text-white bg-dark my-3 w-100" style="max-width: 49rem;">
+  <div class="card-header">
+    <div class="d-flex justify-content-between">
+      <div>
+        <b>To-Do Itens:</b> 
+      </div>
+      <div>
+        <a><i class="fa-solid fa-plus"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    @for (itens of item; track itens.id) 
+    {
+      <div class="my-1" (click)="show_detail(1)">
+        <input  type="checkbox" name="{{itens.content}}" id="{{itens.id}}">  
+        <label class="px-2" for="{{itens.content}}"> {{itens.title}} </label>
+        <hr>
+      </div>
+    }
+  </div>  
+</div>
