@@ -4,13 +4,14 @@ import { IItemDetailService } from "./item-detail.interface";
 @Injectable()
 export class ItemDetailService implements IItemDetailService 
 {
-    private details: object = {name:'', content: ''};
+    private details: object = {name:'', content: 'Ababa'};
     show_detail(id: number) : void
     {
+        this.details = {name:'Batata', content:'Aba'};
         console.log(this.details);
     }
-    get_detail() : void
+    get_detail() : object
     {
-        console.log(this.details);
+        return this.details;
     }
 }

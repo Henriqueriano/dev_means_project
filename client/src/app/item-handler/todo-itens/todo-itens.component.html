@@ -1,4 +1,4 @@
-<div id="main-card" class="card text-white bg-dark my-3 w-100" style="max-width: 49rem;">
+<div id="main-card" class="card text-white bg-dark my-3 w-100" style="max-width: 55rem;">
   <div class="card-header">
     <div class="d-flex justify-content-between">
       <div>
@@ -12,7 +12,7 @@
   <div class="card-body">
     @for (itens of item; track itens.id) 
     {
-      <div class="my-1" (click)="show_detail(1)">
+      <div class="my-1" (click)="show_detail(itens)">
         <input  type="checkbox" name="{{itens.content}}" id="{{itens.id}}">  
         <label class="px-2" for="{{itens.content}}"> {{itens.title}} </label>
         <hr>
