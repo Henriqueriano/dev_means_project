@@ -2,7 +2,7 @@
   <div class="card-header">
     <div class="d-flex justify-content-between">
       <div>
-        <b> Options: </b> 
+        <b> Opções: </b> 
       </div>
       <div>
         <a><i class="fa-solid fa-plus"></i></a>
@@ -13,7 +13,7 @@
     @for(item of itens; track $index) 
     {
       <div class="option-link">
-        <a (click)="foo()"><i class="fa-solid fa-share"></i> {{item.content}}</a>
+        <a href="{{item.link}}"><i class="fa-solid fa-share"></i> {{item.content}}</a>
       </div>
     }
   </div>

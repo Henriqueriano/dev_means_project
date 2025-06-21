@@ -1,9 +1,3 @@
-.option-link :hover
-{
-    cursor: pointer;
-}
-
-b 
-{
-    color: wheat;
-}
+.option-link :hover { cursor: pointer; }
+a { text-decoration: none; color: white;}
+b { color: wheat; }

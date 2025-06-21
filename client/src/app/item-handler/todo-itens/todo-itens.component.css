@@ -1,9 +1,2 @@
-b 
-{
-    color: wheat;
-}
-
-#main-card 
-{
-    overflow: auto;
-}
+b { color: wheat; }
+#main-card { overflow: auto; }

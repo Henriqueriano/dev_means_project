@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { ItemDetailService } from "../../../services/item-detail/item-detail.service";
-@Component(
+import { Component, Input } from "@angular/core";
+@Component
+(
     {
         selector: 'item-detail-component',
         standalone: true,
@@ -11,5 +11,5 @@ import { ItemDetailService } from "../../../services/item-detail/item-detail.ser
 
 export class ItemDetailComponent
 {
-    @Input() details: any = {content: '', data: '0000-00-00'};
+    @Input() details: any = {content: 'Empty', data: '0000-00-00'};
 }
