@@ -9,14 +9,18 @@
       </div>
     </div>
   </div>
-  <div class="card-body">
-    @for (itens of item; track itens.id) 
+  <div class="card-body" id="todo-handler">
+    @for (item of itens; track $index) 
     {
-      <div class="my-1" (click)="show_detail(itens)">
-        <input  type="checkbox" name="{{itens.content}}" id="{{itens.id}}">  
-        <label class="px-2" for="{{itens.content}}"> {{itens.title}} </label>
+      <div class="my-1" (click)="show_detail(item)">
+        <input  type="checkbox" name="{{item.content}}" id="{{item.id}}">  
+        <label class="px-2" for="{{item.content}}"> {{item.title}} </label>
         <hr>
       </div>
+    }
+    @empty 
+    {
+      <p>No has itens.</p>
     }
   </div>  
 </div>

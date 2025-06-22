@@ -1,2 +1,10 @@
 b { color: wheat; }
-#main-card { overflow: auto; }
+#main-card 
+{ 
+    overflow: auto; 
+}
+#todo-handler 
+{
+    overflow-y: scroll;
+    max-height: 38rem;
+}
