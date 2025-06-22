@@ -8,10 +8,10 @@ namespace server.Models
         public string Author { get; set; }
         public TodoItem(int id, string title, string content, string author)
         {
-            this.Id = id;
-            this.Title = title;
-            this.Content = content;
-            this.Author = author;
+            Id = id;
+            Title = title;
+            Content = content;
+            Author = author;
         }
     }    
 }
