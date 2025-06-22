@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 @Component
 (
     {
@@ -8,12 +9,14 @@ import { Component } from "@angular/core";
         standalone: true
     }
 )
-export class OptionsComponent 
+export class OptionsComponent implements OnInit
 {
-    public itens = 
-    [
-        {userPermission:false,content:'Olx',link:'https://www.bing.com/search?pglt=427&q=for+angular&cvid=24e31eb9c6634e60821fbefe1e2509bf&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOdIBCDEzNTlqMGoxqAIAsAIA&FORM=ANNTA1&PC=U531'},
-        {userPermission:false,content:'Insta',link:'https://www.instagram.com/direct/t/105023510897127/'},
-        {userPermission:false,content:'Facebook',link:'https://www.facebook.com/'},
-    ]
+    private readonly http: HttpClient;
+    public itens: any;
+    constructor ( public _http: HttpClient) { this.http = _http; }
+    ngOnInit() 
+    {
+        this.http.get('http://localhost:5174/option/getoptions')
+        .subscribe(res => { this.itens = res; });
+    }
 }
