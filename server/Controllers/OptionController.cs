@@ -10,8 +10,8 @@ namespace server.Controllers
         [HttpGet]
         public Option[] GetOptions()
         {
-            Option[] option = new Option[10];
-            for (int i = 0; i < 10; i++)
+            Option[] option = new Option[5];
+            for (int i = 0; i < 5; i++)
             {
                 Option opt = new(false, "Facebook", "https://www.facebook.com/");
                 option[i] = opt;

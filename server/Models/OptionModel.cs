@@ -8,9 +8,9 @@ namespace server.Models
 
         public Option(bool userPermission, string content, string link)
         {
-            UserPermission = userPermission;
-            Content = content;
-            Link = link;
+            this.UserPermission = userPermission;
+            this.Content = content;
+            this.Link = link;
         }
     }
 }
