@@ -1,2 +1,2 @@
-## usefull links:
-https://icon-icons.com/pt/pack/Nerd/4183
+## To Do Page:
+This repo is the code of the page for my to do organizer.
