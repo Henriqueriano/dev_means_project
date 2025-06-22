@@ -1,8 +1,7 @@
 {
   "name": "client",
   "version": "0.0.0",
-  "config": 
-  {
+  "config": {
     "apiBase": "http://localhost:5174"
   },
   "scripts": {
@@ -10,7 +9,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test" 
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
