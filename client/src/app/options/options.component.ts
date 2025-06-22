@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { config }  from "../../../package.json";
 @Component
 (
     {
@@ -12,17 +13,12 @@ import { HttpClient } from "@angular/common/http";
 export class OptionsComponent implements OnInit
 {
     private readonly http: HttpClient;
-    public itens: any = [{userPermission: false, content:'peidan', link:'Ababa'}];
+    private readonly BASE_URL: string = config.apiBase;
+    public itens: any = [];
     constructor ( public _http: HttpClient) { this.http = _http; }
-    
-    ngOnInit() 
+    ngOnInit() : void 
     {
-        this.http.get("http://localhost:5174/option/getoptions").subscribe(
-            {
-                next: (data) => 
-                    {
-                        this.itens = data;
-                    }
-            })
+        this.http.get(`${this.BASE_URL}/option/getoptions`)
+        .subscribe({ next: (data) => { this.itens = data; } });
     }
 }

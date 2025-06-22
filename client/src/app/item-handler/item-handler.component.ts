@@ -13,8 +13,5 @@ import { TodoItensComponent } from "./todo-itens/todo-itens.component";
 export class ItemHandlerComponent 
 {
     public details: object = {nome:'', content: 'Empty'};
-    set_detail(data: any) 
-    {
-        this.details = data;
-    }
+    set_detail(data: any) : void { this.details = data; }
 }

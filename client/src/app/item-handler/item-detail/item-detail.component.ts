@@ -8,7 +8,6 @@ import { Component, Input } from "@angular/core";
         styleUrl: 'item-detail.component.css',
     }
 )
-
 export class ItemDetailComponent
 {
     @Input() details: any = {content: 'Empty', data: '0000-00-00'};

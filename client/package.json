@@ -1,6 +1,10 @@
 {
   "name": "client",
   "version": "0.0.0",
+  "config": 
+  {
+    "apiBase": "http://localhost:5174"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
